@@ -1,0 +1,9 @@
+sw
+qtenv
+pdfs
+__*
+dist 
+build
+output
+reports
+*.spec

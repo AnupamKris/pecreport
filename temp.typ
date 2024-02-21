@@ -39,8 +39,8 @@
     // inset: 10pt,
     stroke: none,
     align: (right, left, right, left),
-    [Name : ], [ARSATH KHAN A] , [Sec :], [A],
-    [Year :], [IV], [Sem :], [II]
+    [Name : ], [HARISH] , [Sec :], [A],
+    [Year :], [2], [Sem :], [5]
     )
 
     #set text(size:14pt, weight: "regular")
@@ -49,7 +49,7 @@
     columns: (auto, auto, auto, auto),
     inset: 10pt,
     [*S.No*], [*Subject Code*], [*Subject Name*], [*Marks*],
-    [1],[AD8501],[Mathematics],[60],[2],[CW8691],[Data Mining],[60],[3],[AD8502],[Machine Learning],[60],[4],[AD8551],[Deep Learning],[60],[5],[AD8552],[Natural Language Processing],[73],[6],[nan],[GIS],[60]
+    [1],[AD8501],[OPTIMIZATION TECHNIQUES],[61],[2],[CW8691],[COMPUTER NETWORKS],[86],[3],[AD8502],[DATA EXPLORATION AND VISUALIZATION],[60],[4],[AD8551],[BUSINESS ANALYTICS],[60],[5],[AD8552],[MACHINE LEARNING],[77],[6],[AD8525],[GEOGRAPHIC INFORMATION SYSTEM],[61]
     )
 
 

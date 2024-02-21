@@ -70,23 +70,23 @@ template = """
 
 def read_file(path):
     df = pd.read_excel(path)
-    df = df.iloc[2:]
+    col = df.columns
+    subcodes = list(col)[4:-4]
+    subjects = list(df.iloc[0])[4:-4]
     df.columns = df.iloc[0]
-    df = df.iloc[1:]
-    df = df.set_index('S.No')
+    # remove first row
+    df = df.drop(0)
+    df = df.set_index("S.No")
 
-    return df
+    return df, subcodes, subjects
 
 
-def create_reports(df, section, year, sem):
+def create_reports(df, section, year, sem, subcodes, subjects):
     n = len(df)
-
-    for i in range(0, n-1):
-        if  i == 2:
+    for i in range(0, n):
+        if n == 1:
             break
         rec = list(df.iloc[i])
-        subjects = list(df.iloc[-1])[3:-4]
-
         regno = rec[0]
         name = rec[1]
         marks = rec[3:-4]
@@ -95,7 +95,7 @@ def create_reports(df, section, year, sem):
         absent = rec[-2]
         present = total - absent
 
-        rec = [regno, name, present, absent, total, percentage, marks, subjects]
+        rec = [regno, name, present, absent, total, percentage, marks, subcodes]
 
         
 
@@ -118,15 +118,7 @@ def create_reports(df, section, year, sem):
 
         marks = rec[6]
         marks = [str(i) for i in marks]
-        subcodes = rec[7]
-        subnames = [
-            "Mathematics",
-            "Data Mining",
-            "Machine Learning",
-            "Deep Learning",
-            "Natural Language Processing",
-            "GIS",
-        ]
+        subnames = subjects
         snos = [i for i in range(1, len(subcodes) + 1)]
 
         tabledata = []

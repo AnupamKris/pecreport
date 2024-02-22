@@ -138,4 +138,6 @@ def create_reports(df, section, year, sem, subcodes, subjects):
         f = open(f"temp.typ", "w")
         f.write(temp)
         f.close()
-        os.system(f"typst compile temp.typ pdfs/{regno}.pdf")
+        os.system(
+            f"/home/reportgenpec/pecreport/typst compile temp.typ pdfs/{regno}.pdf"
+        )

@@ -1,0 +1,86 @@
+/* import poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #ececec;
+}
+
+form {
+  height: 500px;
+  width: 400px;
+  background: #ffffff;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+.inputfield {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+input,
+select,
+button {
+  height: 50px;
+  width: 80%;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background: #f0f0f0;
+  border-right: 20px solid transparent;
+  padding: 0 20px;
+}
+
+button {
+  background: #0088ff;
+  color: white;
+  min-height: 50px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+label {
+  width: 80%;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.file {
+  height: 90px;
+  width: 80%;
+  background: #ececec;
+
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px 10px 0 0;
+}
+
+.file-name {
+  border-radius: 0 0 10px 10px;
+}

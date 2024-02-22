@@ -39,8 +39,8 @@
     // inset: 10pt,
     stroke: none,
     align: (right, left, right, left),
-    [Name : ], [HARISH] , [Sec :], [A],
-    [Year :], [2], [Sem :], [5]
+    [Name : ], [HARISH] , [Sec :], [-],
+    [Year :], [3], [Sem :], [4]
     )
 
     #set text(size:14pt, weight: "regular")

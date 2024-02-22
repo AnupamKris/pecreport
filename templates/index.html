@@ -1,47 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/styles.css" />
     <title>PEC Reports</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <form action="/create_reports" method="post" enctype="multipart/form-data">
-        <label for="file">File</label>
-        <input type="file" name="file" id="file">
+      <h1>PEC Report</h1>
+      <div class="inputfield">
+        <label class="file" for="file">Choose File</label>
+        <input type="file" name="file" id="file" />
+        <input type="text" readonly class="file-name" />
+      </div>
+      <div class="inputfield">
         <label for="sem">Sem</label>
         <select name="sem" id="sem">
-
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
         </select>
+      </div>
+      <div class="inputfield">
         <label for="year">Year</label>
         <select name="year" id="year">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
         </select>
-
+      </div>
+      <div class="inputfield">
         <label for="section">Section</label>
         <select name="section" id="section">
-            <option value="-">-</option>
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="C">C</option>
+          <option value="-">-</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
         </select>
+      </div>
 
-        <input type="submit" value="Create Reports">
-
+      <button>Create Reports</button>
     </form>
-</body>
 
+    <script>
+      const file = document.getElementById("file");
+      const file_name = document.querySelector(".file-name");
+      file.addEventListener("change", (e) => {
+        file_name.value = e.target.files[0].name;
+      });
+    </script>
+  </body>
 </html>

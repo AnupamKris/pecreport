@@ -97,8 +97,6 @@ def create_reports(df, section, year, sem, subcodes, subjects):
 
         rec = [regno, name, present, absent, total, percentage, marks, subcodes]
 
-        
-
         # rec = [
         #     111420243001,
         #     "AJAY B",
@@ -124,8 +122,8 @@ def create_reports(df, section, year, sem, subcodes, subjects):
         tabledata = []
         for i in range(len(subcodes)):
             tabledata.extend([snos[i], subcodes[i], subnames[i], marks[i]])
-        print(['['+str(i)+']' for i in tabledata])
-        tabledata = ",".join(['['+str(i)+']' for i in tabledata])
+        print(["[" + str(i) + "]" for i in tabledata])
+        tabledata = ",".join(["[" + str(i) + "]" for i in tabledata])
         present = rec[2]
         absent = rec[3]
         total = rec[4]
@@ -133,11 +131,11 @@ def create_reports(df, section, year, sem, subcodes, subjects):
 
         comments = "Good"
 
-        temp = template.format(name, sec, year, sem, tabledata, present, absent, total, attper, comments)
+        temp = template.format(
+            name, sec, year, sem, tabledata, present, absent, total, attper, comments
+        )
 
         f = open(f"temp.typ", "w")
         f.write(temp)
         f.close()
         os.system(f"typst compile temp.typ pdfs/{regno}.pdf")
-
-

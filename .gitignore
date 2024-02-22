@@ -5,5 +5,10 @@ __*
 dist 
 build
 output
-reports
+reports*
+reports.zip
+sample.xlsx
 *.spec
+dist*
+dists
+conf*

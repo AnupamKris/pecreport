@@ -3,7 +3,6 @@ from flask import Flask, request, jsonify, send_file, render_template
 from main import read_file, create_reports
 import shutil
 import os
-from flaskwebgui import FlaskUI
 
 
 print(os.getcwd())
